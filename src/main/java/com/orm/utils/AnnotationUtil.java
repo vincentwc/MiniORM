@@ -7,7 +7,6 @@ import com.orm.annotation.ORMTable;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -86,7 +85,7 @@ public class AnnotationUtil {
     /*
     获得某包下面的所有类名
      */
-    public static Set<String> getClassNameByPackage(String packagePath) {  //cn.itcast.orm.entity
+    public static Set<String> getClassNameByPackage(String packagePath) {  //com.orm.entity
         Set<String> names = new HashSet<>();
         String packageFile = packagePath.replace(".", "/");
         String classpath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
